@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .content{
+            width: 100%;
+            height: 1000px;
+            border: 1px solid red;
+            padding: 0 200px 0 200px;
+            position: relative;
+            margin-top: 50px;
+        }
+        .content>div{
+            height: 600px;
+            width: 400px;
+            position: absolute;
+            box-shadow:0px 7px 30px 0px rgba(21,21,21,0.5);
+            margin-top: 100px;
+            border-radius: 15px;
+            transition: all .6s ;
+            overflow: hidden;
+            background: #fff;
+        }
+        .content>div:nth-child(2){
+            
+            right: 700px;
+            z-index: 98;
+        }
+        .content>div:nth-child(3){
+          
+            right: 500px;
+            z-index: 97;
+        }
+        .content>div:nth-child(4){
+           
+            right: 300px;
+            z-index: 96;
+        }
+        .content>div:last-child{
+            right: 100px;
+            z-index: 95;
+        }
+        .active{
+            z-index: 999999 !important;
+            width: 420px !important;
+            height: 680px !important;
+            margin-top:50px !important;
+            
+           
+        }
+
+        .top_title{
+            width: 100%;
+            height: 181px;
+            background:rgba(238,238,238,1);
+            color: #000;
+            font-size: 30px;
+            line-height:180px;
+            padding-left: 40px;
+            position: relative;
+           
+        }
+        .title_active{
+            background: #2A6EB4 !important;
+        }
+       .top_title>span{
+           display: inline-block;
+           width: 40px;
+           height: 40px;
+           vertical-align: middle;
+           position: absolute;
+           right: 41px;
+           top: 70.5px;
+        }
+        .title_icon1{
+            background: url('./image/5.png') 0 0 no-repeat;
+           background-size: 100%;
+        }
+        .title_icon2{
+            background: url('./image/11.png') 0 0 no-repeat;
+           background-size: 100%;
+        }
+        .title_icon3{
+            background: url('./image/12.png') 0 0 no-repeat;
+           background-size: 100%;
+        }
+        .title_icon4{
+            background: url('./image/13.png') 0 0 no-repeat;
+          
+           background-size: 100%;
+        }
+        .title_icon5{
+            background: url('./image/14.png') 0 0 no-repeat;
+           background-size: 100%;
+        }
+        .Explain{
+            font-size:16px;
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(138,138,138,1);
+            line-height:30px;
+            padding: 46px 43px 0 46px;
+        }
+        .cha_btn{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            width:142px;
+            height:54px;
+            color: black;
+            border:1px solid rgba(210,210,210,1);
+            border-radius:5px;
+            
+            line-height: 3;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            margin-left: -71px;
+        }
+        .cha_btn_active{
+            background:rgba(42,110,180,1);
+            color: #fff;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="active" style="z-index: 99;">
+            <div class="top_title title_active" style="color:#fff">
+                    信贷SaaS系统 <span class="title_icon1"></span>
+            </div>
+            <div class="Explain">
+                信贷SaaS系统是一款基于大数据智能风控的小额信贷系统。<br>
+                通过整合各种智能化工具、数据、通信、规则实现自动进件、自动审批、自动放款、自动还款、自动催收等环节，使信贷业务的开展实现智能化、可控化、简单化、快速化。<br>
+                系统内置一整套信贷风控体系，还为您提供了标准的接口，与P2P对接与引流平台对接、与车贷、抵押贷业务整合等，都可以通过这套系统实现。
+                                            
+            </div>
+            <a href="#" class="cha_btn cha_btn_active">查看详情</a>
+        </div>
+        <div>
+            <div class="top_title">
+                贷超SaaS系统<span class="title_icon2"></span>
+            </div>
+            <div class="Explain">
+                 
+                    贷超SaaS系统，提供一站式信用贷款技术服务平台。
+                    通过汇聚海量贷款产品和首创的四维竞价模式
+                     为有资金需求的借款人提供信用评估、智能推荐便捷申请、众评众测、还款提醒、授信提额等全流程贷款技术服务，最大化满足借款人“更多选择、更高额度、更快借到、更低利率”的借款
+                    需求。     
+                                                                               
+            </div>
+            <a href="#" class="cha_btn">查看详情</a>
+        </div>
+        <div>
+            <div class="top_title">
+                智能催收系统<span class="title_icon3"></span>
+            </div>
+            <div class="Explain">
+                    智能催收系统，是专为金融机构及委外企业量身定制的，逾期账款催收管理系统。
+                    提供一站式催收服务，操作便捷、数据稳定安
+                    全另有任务、考勤系统，进行高效的员工管理
+                    ，使催收作业更高效。免部署、免安装、在线入驻、低费、轻量易懂平台突破传统催收模式，打通不良资产与催收机构，构建不良资产智能处置平台智能催收工具。
+                    攻克传统催收痛点，全面开启智能催收！
+                                                                                                                   
+            </div>
+            <a href="#" class="cha_btn">查看详情</a>
+        </div>
+        <div>
+            <div class="top_title">
+                大数据风控引擎<span class="title_icon4"></span>
+            </div>
+            <div class="Explain">
+                   大数据风控引擎是一款针对信贷风控领域，集
+                    用户行为数据收集、线上审批、用户信用评价
+                     ，及群体细分和信贷决策的全流程信贷风控决策平台深度学习核心引擎及技术，运用的决策引擎开发工具，整合个人、企业全景数据，利用专业的风控模型和大数据技术，进行分析与建模，完成全方位用户画像，确保征信信息真实可靠，为客户提供智能、精准、全面、高效的风控管理和专业化的风险咨询服务。
+                                                                             
+            </div>
+            <a href="#" class="cha_btn">查看详情</a>
+        </div>
+        <div>
+            <div class="top_title">
+                智能财务管理<span class="title_icon5"></span>
+            </div>
+            <div class="Explain">
+                    银行级信贷核心，支持丰富的信贷产品定义，配置化的息费设置，灵活的扣款策略，完善的
+                    入账逻辑,  同时支持多支付机构和多资方的接入
+                   ，提供完整的账户状态报表以及支付机构对账体系。
+                    在账户生命周期管理中，提供还款计划试算、建账、期供计算、扣款、还款、展期、减免、调账差
+                                                                           
+            </div>
+            <a href="#" class="cha_btn">查看详情</a>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+         $('.content>div').hover(function(){
+             var li = $(this);
+             li.addClass("active").siblings().removeClass('active');
+         })
+         $('.top_title').parent().on('mouseenter',function(){
+             $(this).children(":nth-child(1)").addClass('title_active')
+             $(this).children(":first-child").css("color","#fff")
+             console.log($(this).children())
+         }).on("mouseleave",function(){
+            $(this).children(":nth-child(1)").removeClass('title_active')
+            $(this).children(":first-child").css("color","#000")
+         })
+
+         $('.cha_btn').parent().on('mouseenter',function(){
+            $(this).children(":last-child").addClass('cha_btn_active')
+         }).on('mouseleave',function(){
+            $(this).children(":last-child").removeClass('cha_btn_active')
+         })
+       //icon切换
+       //console.log($('.title_icon1').parent().parent())
+       $('.title_icon1').parent().parent().on('mouseenter',function(){
+           $(".title_icon1").css("background-image","url(./image/5.png)");
+       }).on("mouseleave",function(){
+           $(".title_icon1").css("background-image","url(./image/10.png)");
+       })
+       $('.title_icon2').parent().parent().on('mouseenter',function(){
+           $(".title_icon2").css("background-image","url(./image/6.png)");
+       }).on("mouseleave",function(){
+           $(".title_icon2").css("background-image","url(./image/11.png)");
+       })
+       $('.title_icon3').parent().parent().on('mouseenter',function(){
+           $(".title_icon3").css("background-image","url(./image/7.png)");
+       }).on("mouseleave",function(){
+           $(".title_icon3").css("background-image","url(./image/12.png)");
+       })
+       $('.title_icon4').parent().parent().on('mouseenter',function(){
+           $(".title_icon4").css("background-image","url(./image/8.png)");
+       }).on("mouseleave",function(){
+           $(".title_icon4").css("background-image","url(./image/13.png)");
+       })
+       $('.title_icon5').parent().parent().on('mouseenter',function(){
+           $(".title_icon5").css("background-image","url(./image/9.png)");
+       }).on("mouseleave",function(){
+           $(".title_icon5").css("background-image","url(./image/14.png)");
+       })
+    </script>
+</body>
+</html>
